@@ -1,5 +1,7 @@
 
 
-div.wrapper{
-    height: 100vh;
+img{
+    width: 18vw;
+    height: 18vw;
+    object-fit: cover;
 }
