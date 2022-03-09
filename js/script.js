@@ -43,17 +43,17 @@ const team = [
 ];
 
 // print the name, role and photo string information on the console
-for (let key in team){
+// for (let key in team){
 
-console.log(`
+// console.log(`
     
-name: ${team[key].name},
-role: ${team[key].role},
-image: ${team[key].image}
+// name: ${team[key].name},
+// role: ${team[key].role},
+// image: ${team[key].image}
     
-    `);
+//     `);
 
-};
+// };
 
 // print the name, role and photo string information on the DOM
 // for (let key in team){
@@ -91,10 +91,18 @@ for (let key in team){
 // di aggiungere un team member per volta in più a quelli già presenti.
 
 
+// when the button is clicked it executes the function that I invoke inside
 document.querySelector("button").addEventListener("click", function(){
 
     addNewMember(team);
 });
+
+/**
+ * 
+function that, having taken as input the data entered by the user, first adds it to a new object created. this object is then added to the existing array of objects and finally displayed in the DOM
+ * 
+ * @param {*} teamList 
+ */
 
 function addNewMember(teamList){
     
