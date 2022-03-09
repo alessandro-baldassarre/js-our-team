@@ -85,3 +85,39 @@ for (let key in team){
     output.appendChild(newDiv);
 
     };
+
+// Aggiungi in fondo all'esercizio un form con nome, 
+// ruolo e un link all'immagine che con un bottone consentano 
+// di aggiungere un team member per volta in più a quelli già presenti.
+
+
+document.querySelector("button").addEventListener("click", function(){
+
+    addNewMember(team);
+});
+
+function addNewMember(teamList){
+    
+    const newMemberName = document.getElementById("new-member-name");
+    const newMemberRole = document.getElementById("new-member-role");
+    const newMemberImage = document.getElementById("new-member-img");
+
+    let newMember = {};
+    newMember.name = newMemberName.value;
+    newMember.role = newMemberRole.value;
+    newMember.image = newMemberImage.value;
+
+    teamList.push(newMember);
+
+    const newDiv = document.createElement("div");
+    newDiv.classList.add("col-lg-4","col-sm-6","col-12","text-center","d-flex","align-items-center","flex-column","mb-5");
+    newDiv.innerHTML = `
+    <img src="${newMember.image}" alt="image of member team" class="rounded-circle mb-3 shadow border border-primary p-1">
+    <h5 class="text-uppercase fw-bold">${newMember.name}</h5>
+    <p>${newMember.role}</p> `;
+
+    const output = document.querySelector(".row");
+    output.appendChild(newDiv);
+
+};
+
