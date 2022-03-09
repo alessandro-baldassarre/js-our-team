@@ -75,7 +75,7 @@ image: ${team[key].image}
 for (let key in team){
 
     const newDiv = document.createElement("div");
-    newDiv.classList.add("col-4", "p-5","text-center");
+    newDiv.classList.add("col-lg-4","col-sm-6","col-12","text-center","d-flex","align-items-center","flex-column","mb-5");
     newDiv.innerHTML = `
     <img src="img/${team[key].image}" alt="image of member team" class="rounded-circle mb-3 shadow border border-primary p-1">
     <h5 class="text-uppercase fw-bold">${team[key].name}</h5>
