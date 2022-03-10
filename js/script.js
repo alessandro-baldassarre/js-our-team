@@ -43,43 +43,28 @@ const team = [
 ];
 
 // print the name, role and photo string information on the console
-// for (let key in team){
+for (let i = 0; i < team.length; i++){
 
-// console.log(`
+console.log(`
     
-// name: ${team[key].name},
-// role: ${team[key].role},
-// image: ${team[key].image}
+name: ${team[i].name},
+role: ${team[i].role},
+image: ${team[i].image}
     
-//     `);
+    `);
 
-// };
+};
 
 // print the name, role and photo string information on the DOM
-// for (let key in team){
 
-    
-
-//     const newDiv = document.createElement("div");
-//     newDiv.classList.add("fs-4", "text-center","p-5");
-//     newDiv.innerHTML += `
-//     name: ${team[key].name}<br>
-//     role: ${team[key].role}<br>
-//     <img src="img/${team[key].image}" alt="image of member team">` ;
-
-//     const output = document.getElementById("output");
-//     output.appendChild(newDiv);
-
-//     };
-
-for (let key in team){
+for (let i = 0; i < team.length; i++){
 
     const newDiv = document.createElement("div");
     newDiv.classList.add("col-lg-4","col-sm-6","col-12","text-center","d-flex","align-items-center","flex-column","mb-5");
     newDiv.innerHTML = `
-    <img src="img/${team[key].image}" alt="image of member team" class="rounded-circle mb-3 shadow border border-primary p-1">
-    <h5 class="text-uppercase fw-bold">${team[key].name}</h5>
-    <p>${team[key].role}</p> `;
+    <img src="img/${team[i].image}" alt="image of member team" class="rounded-circle mb-3 shadow border border-primary p-1">
+    <h5 class="text-uppercase fw-bold">${team[i].name}</h5>
+    <p>${team[i].role}</p> `;
 
     const output = document.querySelector(".row");
     output.appendChild(newDiv);
